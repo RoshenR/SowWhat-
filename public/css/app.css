@@ -113,7 +113,6 @@ footer a:hover {
 
 .main-first-zone {
     background-image: url('../../img/DALL·E-2025-01-08-17.23.png');
-    backdrop-filter: brightness(10%);
     background-size: cover;
     background-position: center;
     padding: 50px 20px;
