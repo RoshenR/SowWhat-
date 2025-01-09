@@ -32,5 +32,14 @@ function getArticle(int $id): mixed {
 }
 
 // Update
+/// function editArticle(int, $id, string $title, string $description, string $content): bool {
+///    $sql = "UPDATE articles SET title = :title, description = :description, content = :content WHERE id = :id"
+///    $query = dbConnect()->prepare($sql);
+///    $query->bindParam()
+/// };
 
-// Delete
+// DELETE
+/// function deleteArticle(int $id): bool {
+///    $sql ="DELETE FROM articles WHERE id = :id";
+///    $query = dbConnect()->
+/// }
