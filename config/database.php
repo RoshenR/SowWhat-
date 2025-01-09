@@ -2,8 +2,8 @@
 
 const DB_CONFIG = [
     'host' => 'localhost',
-    'port' => '3307',
+    'port' => '3306',
     'dbname' => 'bdd_sowwhat',
     'username' => 'root',
-    'password' => ''
+    'password' => 'Ren55HELL'
 ];
