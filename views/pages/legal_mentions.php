@@ -9,7 +9,7 @@
     </section>
     <section>
         <h2>Conditions d'Utilisation</h2>
-        <p>Ma conditions</p>
+        <p>Ma condition</p>
     </section>
 </div>
 
