@@ -20,4 +20,13 @@
             <p>Consultez un résumé des balises signalées récemment.</p>
         </div>
     </div>
+
+    <div class="a-little-more-main">
+        <p>Nous sommes une jeune entreprise dynamique créée par 4 étudiants passionnés et engagés.
+            Notre objectif est simple : résoudre le problème des balises "SoWeSign" défectueuses
+            pour offrir une expérience optimale aux élèves. Nous croyons en l'importance d'une
+            technologie fiable et fonctionnelle, et nous mettons tout en œuvre pour assurer un service
+            efficace et innovant. Ensemble, nous œuvrons pour simplifier la gestion et l'entretien de ces balises,
+            en alliant expertise technique et esprit d'équipe.</p>
+    </div>
 </div>
