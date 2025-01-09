@@ -8,33 +8,26 @@ const AVAILABLE_ROUTES = [
             'description' => 'Accueil tah les bogota..',
         ]
     ],
-    'contact' => [
-		'controller' => 'contactController.php',
-		'seo' => [
-			'title' => 'Contact',
-			'description' => 'Ma meta desc...',
-		]
-	],
-    'legal_mentions' => [
-		'controller' => 'legalMentionsController.php',
-		'seo' => [
-			'title' => 'Mention légales',
-			'description' => 'Ma meta desc...',
-		]
-	],
-    'team' => [
-        'controller' => 'teamController.php',
-        'seo' => [
+    "team" => [
+        'controllers' => 'teamController.php',
+        "SEO" => [
             'title' => 'Team',
-            'description' => 'Ma meta desc...',
+            'description' => 'Ici on te démarre',
         ]
     ],
-    'privacy_policy' => [
-		'controller' => 'privacyPolicyController.php',
-		'seo' => [
-			'title' => 'Politique de confidentialité',
-			'description' => 'Ma meta desc...',
-		]
+    "contact" => [
+        'controllers' => 'contactController.php',
+        "SEO" => [
+            'title' => 'Contact',
+            'description' => 'Contactez nous',
+        ]
+    ],
+    "conditions d'utilisation" => [
+        'controllers' => 'legalMentionsController.php',
+        "SEO" => [
+            'title' => 'Conditions d\'utilisation',
+            'description' => 'Conditions d\'utilisation',
+        ]
     ],
 ];
 
