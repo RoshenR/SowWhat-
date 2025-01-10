@@ -1,3 +1,4 @@
+/* GLOBAL STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +10,7 @@ body {
     background-color: #F4F1EC;
 }
 
-/*HEADER START*/
-
-
+/* HEADER START */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -52,7 +51,7 @@ body {
     position: relative;
     overflow: hidden;
     transition: color 0.3s ease;
-    border-radius: 5px; /* Ajout d'un arrondi pour un design plus doux */
+    border-radius: 5px;
 }
 
 .navbar .nav-links a::before {
@@ -78,12 +77,9 @@ body {
 .navbar .nav-links a img {
     height: 20px;
 }
+/* HEADER END */
 
-/*HEADER END*/
-
-
-/*FOOTER START*/
-
+/* FOOTER START */
 footer {
     margin-top: auto;
     background-color: #a79680;
@@ -102,11 +98,9 @@ footer a {
 footer a:hover {
     color: #137291;
 }
+/* FOOTER END */
 
-/*FOOTER END*/
-
-/*MAIN PAGE START*/
-
+/* MAIN PAGE START */
 .home-section {
     font-family: Arial, sans-serif;
 }
@@ -173,6 +167,64 @@ footer a:hover {
 .info-card p {
     font-size: 1rem;
 }
+/* MAIN PAGE END */
 
+/* CONTACT PAGE START */
+.contact-section {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-/*MAIN PAGE END*/
+.contact-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #2f3e46;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section label {
+    font-weight: bold;
+    color: #2f3e46;
+    margin-bottom: 5px;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.contact-section textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-section button {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #45a049;
+}
+/* CONTACT PAGE END */
