@@ -23,7 +23,7 @@ const AVAILABLE_ROUTES = [
         ]
     ],
     "conditions d'utilisation" => [
-        'controllers' => 'conditionsController.php',
+        'controllers' => 'legalMentionsController.php',
         "SEO" => [
             'title' => 'Conditions d\'utilisation',
             'description' => 'Conditions d\'utilisation',
