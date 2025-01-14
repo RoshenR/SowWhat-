@@ -22,6 +22,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Contactez nous',
         ]
     ],
+<<<<<<< HEAD
     "detection" => [
         'controllers' => 'detectionController.php',
         "SEO" => [
@@ -29,6 +30,8 @@ const AVAILABLE_ROUTES = [
             'description' => 'Conditions d\'utilisation',
         ]
     ],
+=======
+>>>>>>> master
     "conditions d'utilisation" => [
         'controllers' => 'conditionsController.php',
         "SEO" => [
