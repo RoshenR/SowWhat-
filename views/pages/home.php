@@ -10,9 +10,6 @@
             </article>
         <?php } ?>
     </div>
-<<<<<<< Updated upstream
-</div>
-=======
     <div class="info-cards">
         <div class="info-card">
             <h3>Dénoncer une balise</h3>
@@ -38,4 +35,3 @@
             en alliant expertise technique et esprit d'équipe.</p>
     </div>
 </div>
->>>>>>> Stashed changes

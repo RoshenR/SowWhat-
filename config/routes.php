@@ -8,8 +8,6 @@ const AVAILABLE_ROUTES = [
             'description' => 'Accueil tah les bogota..',
         ]
     ],
-<<<<<<< Updated upstream
-=======
     "team" => [
         'controllers' => 'teamController.php',
         "SEO" => [
@@ -28,7 +26,7 @@ const AVAILABLE_ROUTES = [
         'controllers' => 'detectionController.php',
         "SEO" => [
             'title' => 'detection',
-            'description' => 'detection balise',
+            'description' => 'Conditions d\'utilisation',
         ]
     ],
     "conditions d'utilisation" => [
@@ -38,7 +36,6 @@ const AVAILABLE_ROUTES = [
             'description' => 'Conditions d\'utilisation',
         ]
     ],
->>>>>>> Stashed changes
 ];
 
 const DEFAULT_ROUTE = AVAILABLE_ROUTES['home'];
