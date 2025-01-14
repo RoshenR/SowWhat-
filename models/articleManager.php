@@ -31,6 +31,8 @@ function getArticle(int $id): mixed {
     return $query->fetch();
 }
 
+
+
 // Update
 /// function editArticle(int, $id, string $title, string $description, string $content): bool {
 ///    $sql = "UPDATE articles SET title = :title, description = :description, content = :content WHERE id = :id"
