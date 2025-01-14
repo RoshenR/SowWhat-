@@ -1,3 +1,4 @@
+/* Global reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,81 +10,357 @@ body {
     background-color: #F4F1EC;
 }
 
-/*HEADER START*/
-
-
-.navbar {
+/* HEADER START */
+.burger-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(167, 150, 128, 0.8);
+    background-color: rgba(167, 150, 128, 1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.navbar .logo {
+.burger-navbar .logo {
     display: flex;
     align-items: center;
-    margin-left: 20px;
 }
 
-.navbar .logo img {
-    height: 80px;
-    margin-right: 10px;
+.burger-navbar .logo img {
+    height: 60px;
 }
 
-.navbar .nav-links {
+.burger-menu-icon {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.navbar .nav-links a {
+.burger-menu-icon span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu-icon span:nth-child(1) {
+    top: 0;
+}
+
+.burger-menu-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.burger-menu-icon span:nth-child(3) {
+    top: 20px;
+}
+
+.burger-menu-icon.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu-icon.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.burger-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(44, 62, 80, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 10%;
+    border-radius: 8px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.burger-nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.burger-nav-links a {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
-    padding: 1rem 1.1rem;
-    background-color: #2F4550;
+    padding: 1rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.burger-nav-links.active a {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.burger-nav-links a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.burger-nav-links a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.burger-nav-links a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.burger-nav-links a:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.burger-nav-links a:hover {
+    background-color: #137291;
+    color: #fff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .burger-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .burger-navbar .logo img {
+        height: 50px;
+    }
+
+    .burger-menu-icon {
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .burger-nav-links {
+        width: 100%;
+    }
+
+    .burger-nav-links a {
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
+    }
+}
+/* HEADER END */
+
+/* MAIN PAGE START */
+.home-section {
+    position: relative;
+}
+
+.main-first-zone {
+    background-image: url('../../img/DALL·E-2025-01-08-17.23.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 40vh;
+    color: #e7ded0;
+}
+
+.home-slogan {
+    position: relative;
+    margin-left: 10rem;
+    width: 50%;
+}
+
+.home-slogan h1 {
+    font-family: "League Spartan", serif;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-shadow: 2px 1.5px #332f2f;
+    color: #e7ded0;
+}
+
+.main-slogan-image {
+    max-width: 250px;
+    height: auto;
+    margin-right: 10%;
+}
+
+.info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.info-card {
+    background-color: #2f3e46;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 300px;
+}
+
+.info-card h3 {
+    margin-top: 10%;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.info-card button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #137291;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 5px;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-    border-radius: 5px; /* Ajout d'un arrondi pour un design plus doux */
+    transition: background-color 0.3s ease;
 }
 
-.navbar .nav-links a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
+.info-card button:hover {
+    background-color: #1b5563;
+}
+
+/* Responsive Main Section */
+@media (max-width: 768px) {
+    .main-first-zone {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home-slogan {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-slogan h1 {
+        font-size: 2.5rem;
+        margin: 10px 0;
+    }
+
+    .main-slogan-image {
+        max-width: 150px;
+        margin-top: 20px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info-card {
+        width: 90%;
+        max-width: none;
+    }
+
+    .info-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
+    }
+
+    .info-card button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
+
+
+.separator {
     width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: skewX(-20deg);
-    transition: left 0.3s ease;
+    height: 5px;
+    background-color: #a79680;
+    margin: 30px auto;
+    border-radius: 1px;
 }
 
-.navbar .nav-links a:hover::before {
-    left: 100%;
+
+.a-little-more-main {
+    background-color: #f5f5f5;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
 }
 
-.navbar .nav-links a:hover {
-    color: #137291;
+.a-little-more-main strong {
+    font-weight: bold;
+    color: #2F4550;
 }
 
-.navbar .nav-links a img {
-    height: 20px;
+.a-little-more-main em {
+    font-style: italic;
+    color: #A79680;
 }
 
-/*HEADER END*/
+.a-little-more-main p {
+    margin: 0;
+    font-size: 1.1rem;
+}
 
+.a-little-more-main h2 {
+    text-align: center;
+}
+/* MAIN PAGE END */
 
-/*FOOTER START*/
-
+/* FOOTER START */
 footer {
     margin-top: auto;
     background-color: #a79680;
@@ -103,77 +380,14 @@ footer a:hover {
     color: #137291;
 }
 
-/*FOOTER END*/
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
 
-/*MAIN PAGE START*/
-
-.home-section {
-    font-family: Arial, sans-serif;
+    footer a {
+        font-size: 0.9rem;
+    }
 }
-
-.main-first-zone {
-    background-image: url('../../img/DALL·E-2025-01-08-17.23.png');
-    backdrop-filter: brightness(10%);
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    height: 40vh;
-    color: #e7ded0;
-}
-
-.home-slogan h1 {
-    font-family: "League Spartan", serif;
-    font-optical-sizing: auto;
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin: 0 0 0 10rem;
-    text-shadow: 2px 1.5px #332f2f;
-}
-
-.main-slogan-image {
-    max-width: 250px;
-    min-width: 200px;
-    height: auto;
-    margin-right: 10%;
-}
-
-.info-cards {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    padding: 20px;
-    height: 35vh;
-}
-
-.info-card {
-    background-color: #2f3e46;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1;
-    margin: 0 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.info-card:hover {
-    transform: scale(1.05);
-}
-
-.info-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.info-card p {
-    font-size: 1rem;
-}
-
-
-/*MAIN PAGE END*/
+/* FOOTER END */
