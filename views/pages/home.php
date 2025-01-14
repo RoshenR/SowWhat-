@@ -1,8 +1,10 @@
 <div id="home" class="home-section">
     <div class="main-first-zone">
         <div class="home-slogan">
-            <h1>SowWhat?<br>
-                Pour signer, vraiment.</h1>
+            <h1>
+                SowWhat? <br>
+                Pour signer, vraiment.
+            </h1>
         </div>
         <img src="././img/DALL_E-2025-01-08-16.47-removebg-preview.png" alt="Image montrant une 'balise' SoWeSign non fonctionnelle" class="main-slogan-image">
     </div>
@@ -17,11 +19,7 @@
             <p>Accédez à des statistiques détaillées sur les balises signalées.</p>
             <button><span>Voir les stats</span> <ion-icon name="arrow-forward-outline"></ion-icon></button>
         </div>
-        <div class="info-card">
-            <h3>Récap</h3>
-            <p>Consultez un résumé des balises signalées récemment.</p>
-            <button><span>Consulter ici</span> <ion-icon name="arrow-forward-outline"></ion-icon></button>
-        </div>
+
     </div>
 
     <div class="separator"></div>

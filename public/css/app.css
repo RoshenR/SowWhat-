@@ -1,3 +1,4 @@
+/* Global reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +10,7 @@ body {
     background-color: #F4F1EC;
 }
 
-/*HEADER START*/
-
-
+/* HEADER START */
 .burger-navbar {
     display: flex;
     justify-content: space-between;
@@ -38,6 +37,9 @@ body {
     height: 24px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .burger-menu-icon span {
@@ -61,7 +63,6 @@ body {
     top: 20px;
 }
 
-
 .burger-menu-icon.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
 }
@@ -73,7 +74,6 @@ body {
 .burger-menu-icon.active span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
-
 
 .burger-nav-links {
     display: none;
@@ -149,54 +149,43 @@ body {
     color: #fff;
 }
 
-/* Desktop View */
-@media (min-width: 768px) {
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .burger-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .burger-navbar .logo img {
+        height: 50px;
+    }
+
     .burger-menu-icon {
-        display: block;
+        align-self: flex-end;
+        margin-bottom: 10px;
     }
 
     .burger-nav-links {
-        display: none;
+        width: 100%;
+    }
+
+    .burger-nav-links a {
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
     }
 }
+/* HEADER END */
 
-/*HEADER END*/
-
-
-/*FOOTER START*/
-
-footer {
-    margin-top: auto;
-    background-color: #a79680;
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-}
-
-footer a {
-    text-decoration: none;
-    color: #2f4550;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #137291;
-}
-
-/*FOOTER END*/
-
-/*MAIN PAGE START*/
-
+/* MAIN PAGE START */
 .home-section {
-    font-family: Arial, sans-serif;
+    position: relative;
 }
 
 .main-first-zone {
     background-image: url('../../img/DALL·E-2025-01-08-17.23.png');
     background-size: cover;
     background-position: center;
-    padding: 50px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -205,43 +194,47 @@ footer a:hover {
     color: #e7ded0;
 }
 
+.home-slogan {
+    position: relative;
+    margin-left: 10rem;
+    width: 50%;
+}
+
 .home-slogan h1 {
     font-family: "League Spartan", serif;
-    font-optical-sizing: auto;
     font-size: 4rem;
     font-weight: bold;
     line-height: 1.2;
-    margin: 0 0 0 10rem;
     text-shadow: 2px 1.5px #332f2f;
+    color: #e7ded0;
 }
 
 .main-slogan-image {
     max-width: 250px;
-    min-width: 200px;
     height: auto;
     margin-right: 10%;
 }
 
 .info-cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
     padding: 20px;
-    height: 35vh;
 }
 
 .info-card {
     background-color: #2f3e46;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     flex: 1;
     margin: 0 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
+    max-width: 300px;
 }
-
 
 .info-card h3 {
     margin-top: 10%;
@@ -268,39 +261,61 @@ footer a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
-    overflow: hidden;
-    transition: color 0.3s ease;
-}
-
-.info-card button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #a79680;
-    z-index: 0;
-    transition: left 0.3s ease;
-}
-
-.info-card button:hover::before {
-    left: 0;
+    transition: background-color 0.3s ease;
 }
 
 .info-card button:hover {
-    color: #fff;
+    background-color: #1b5563;
 }
 
-.info-card button span {
-    position: relative;
-    z-index: 1;
-}
+/* Responsive Main Section */
+@media (max-width: 768px) {
+    .main-first-zone {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
 
-.info-card button ion-icon {
-    font-size: 1.2rem;
-}
+    .home-slogan {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
 
+    .home-slogan h1 {
+        font-size: 2.5rem;
+        margin: 10px 0;
+    }
+
+    .main-slogan-image {
+        max-width: 150px;
+        margin-top: 20px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info-card {
+        width: 90%;
+        max-width: none;
+    }
+
+    .info-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
+    }
+
+    .info-card button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
 
 
 .separator {
@@ -343,5 +358,36 @@ footer a:hover {
 .a-little-more-main h2 {
     text-align: center;
 }
+/* MAIN PAGE END */
 
-/*MAIN PAGE END*/
+/* FOOTER START */
+footer {
+    margin-top: auto;
+    background-color: #a79680;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #2f4550;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #137291;
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    footer a {
+        font-size: 0.9rem;
+    }
+}
+/* FOOTER END */
