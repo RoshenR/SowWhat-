@@ -220,14 +220,14 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .info-card {
     background-color: #2f3e46;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     flex: 1;
     margin: 0 10px;
@@ -261,11 +261,37 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.info-card button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #a79680;
+    z-index: 0;
+    transition: left 0.3s ease;
+}
+
+.info-card button:hover::before {
+    left: 0;
 }
 
 .info-card button:hover {
-    background-color: #1b5563;
+    color: #fff;
+}
+
+.info-card button span {
+    position: relative;
+    z-index: 1;
+}
+
+.info-card button ion-icon {
+    font-size: 1.2rem;
 }
 
 /* Responsive Main Section */
