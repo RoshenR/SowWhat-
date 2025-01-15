@@ -197,14 +197,14 @@ footer a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .info-card {
     background-color: #2f3e46;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     flex: 1;
     margin: 0 10px;
@@ -221,9 +221,57 @@ footer a:hover {
 
 .info-card p {
     font-size: 1rem;
+
+    margin-bottom: 30px;
+}
+
+.info-card button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #137291;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.info-card button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #a79680;
+    z-index: 0;
+    transition: left 0.3s ease;
+}
+
+.info-card button:hover::before {
+    left: 0;
 }
 /* MAIN PAGE END */
 
+.info-card button:hover {
+    color: #fff;
+}
+
+.info-card button span {
+    position: relative;
+    z-index: 1;
+}
+
+.info-card button ion-icon {
+    font-size: 1.2rem;
+=======
 /* Contact Section */
 .contact-container {
     max-width: 900px;
