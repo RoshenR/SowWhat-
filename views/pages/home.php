@@ -12,7 +12,7 @@
         <div class="info-card">
             <h3>Dénoncer une balise</h3>
             <p>Signalez rapidement toute balise défectueuse en un clic.</p>
-            <button><span>Dénoncer ici</span> <ion-icon name="arrow-forward-outline"></ion-icon></button>
+            <a href="index.php?page=detection"><button><span>Dénoncer ici</span> <ion-icon name="arrow-forward-outline"></ion-icon></button></a>
         </div>
         <div class="info-card">
             <h3>Stats</h3>

@@ -22,16 +22,13 @@ const AVAILABLE_ROUTES = [
             'description' => 'Contactez nous',
         ]
     ],
-<<<<<<< HEAD
     "detection" => [
         'controllers' => 'detectionController.php',
         "SEO" => [
             'title' => 'detection',
-            'description' => 'Conditions d\'utilisation',
+            'description' => 'denoncation des balises ',
         ]
     ],
-=======
->>>>>>> master
     "conditions d'utilisation" => [
         'controllers' => 'conditionsController.php',
         "SEO" => [
@@ -42,3 +39,6 @@ const AVAILABLE_ROUTES = [
 ];
 
 const DEFAULT_ROUTE = AVAILABLE_ROUTES['home'];
+
+
+
