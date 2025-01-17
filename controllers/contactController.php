@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Validation des données du formulaire
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
-    $subject = htmlspecialchars($_POST['subject'] ?? null);
+    $sujet = htmlspecialchars($_POST['sujet'] ?? null);
     $message = htmlspecialchars($_POST['message']);
 
     if (!empty($name) && !empty($email) && !empty($message)) {

@@ -1,5 +1,8 @@
-/* Global reset */
-* {
+@import "components/index.css";
+@import "layouts/index.css";
+
+/* Global reset
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +13,7 @@ body {
     background-color: #F4F1EC;
 }
 
-/* HEADER START */
+HEADER START
 .burger-navbar {
     display: flex;
     justify-content: space-between;
@@ -149,7 +152,7 @@ body {
     color: #fff;
 }
 
-/* Responsive Navbar */
+Responsive Navbar
 @media (max-width: 768px) {
     .burger-navbar {
         flex-direction: column;
@@ -175,9 +178,9 @@ body {
         padding: 0.8rem 1rem;
     }
 }
-/* HEADER END */
+HEADER END
 
-/* MAIN PAGE START */
+MAIN PAGE START
 .home-section {
     position: relative;
 }
@@ -261,14 +264,40 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.info-card button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #a79680;
+    z-index: 0;
+    transition: left 0.3s ease;
+}
+
+.info-card button:hover::before {
+    left: 0;
 }
 
 .info-card button:hover {
-    background-color: #1b5563;
+    color: #fff;
 }
 
-/* Responsive Main Section */
+.info-card button span {
+    position: relative;
+    z-index: 1;
+}
+
+.info-card button ion-icon {
+    font-size: 1.2rem;
+}
+
+Responsive Main Section
 @media (max-width: 768px) {
     .main-first-zone {
         height: auto;
@@ -317,7 +346,6 @@ body {
     }
 }
 
-
 .separator {
     width: 100%;
     height: 5px;
@@ -358,9 +386,151 @@ body {
 .a-little-more-main h2 {
     text-align: center;
 }
-/* MAIN PAGE END */
+MAIN PAGE END
 
-/* FOOTER START */
+Styles spécifiques pour la page des mentions légales
+.content {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.content header {
+    background-color: #a79680;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.content main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.content main h2 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #a79680;
+    padding-bottom: 0.5rem;
+}
+
+.content main p {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.content main ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: #666;
+}
+
+.content main ul li {
+    margin-bottom: 0.5rem;
+}
+
+.content footer {
+    background-color: #a79680;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.content footer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.content footer a:hover {
+    color: #137291;
+}
+
+Section de contact
+.contact-section {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff; Couleur de fond pour le formulaire
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ Titre
+.contact-section h1 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Groupes de formulaire
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Bouton d'envoi
+button[type="submit"] {
+    background-color: #0078d7; /* Couleur du bouton
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #005ba1;
+}
+
+/* FOOTER START
 footer {
     margin-top: auto;
     background-color: #a79680;

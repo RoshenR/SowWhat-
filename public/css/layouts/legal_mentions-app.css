@@ -1,0 +1,133 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ece8df; /* Couleur de fond plus douce */
+    color: #2b2b2b; /* Texte plus sombre */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles généraux pour la page des mentions légales */
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #f8f9fa;
+    padding: 20px 30px; /* Espacement augmenté */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* En-tête spécifique à la section */
+.content header {
+    background-color: #a79680; /* Couleur du header */
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Texte principal */
+.content main {
+    padding: 1rem 2rem;
+    line-height: 1.8;
+}
+
+.content main h2 {
+    color: #333; /* Titre plus sombre */
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 2px solid #a79680;
+    padding-bottom: 0.5rem;
+}
+
+.content main p {
+    margin-bottom: 1.5rem;
+    color: #444; /* Texte principal plus sombre */
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.content main ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    list-style-type: disc;
+    color: #666;
+}
+
+.content main ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.content footer {
+    background-color: #a79680; /* Couleur du footer */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.content footer a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffffff;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.content footer a:hover {
+    color: #d1d1d1; /* Couleur sur hover */
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+    }
+
+    .content main {
+        padding: 1rem;
+    }
+
+    .content main h2 {
+        font-size: 1.4rem;
+    }
+
+    .content main p {
+        font-size: 0.9rem;
+    }
+
+    .content header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .content main h2 {
+        font-size: 1.4rem;
+    }
+
+    .content main p {
+        font-size: 0.9rem;
+    }
+}
