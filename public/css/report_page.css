@@ -1,0 +1,68 @@
+.container-report {
+    margin: 20px;
+}
+
+.report-table {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+td {
+    background-color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#modifyReportBtn {background-color: #16168b;}
+#deleteReportBtn {background-color: #f63636;}
+#addReportBtn {background-color: #4CAF50;}
+#addReportBtn:hover {background-color: dimgrey;}
+
+.reportBtn {
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.reportBtn:hover {
+    background-color: dimgrey;
+}
+
+

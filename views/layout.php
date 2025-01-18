@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <script src="./public/JS/script_burger.js" defer></script>
     <link rel="stylesheet" href="./public/css/app.css">
+    <link rel="stylesheet" href="./public/css/report_page.css">
 </head>
 
 <body>

@@ -22,6 +22,13 @@ const AVAILABLE_ROUTES = [
             'description' => 'Contactez nous',
         ]
     ],
+    "report" => [
+        'controllers' => 'reportController.php',
+        "SEO" => [
+            'title' => 'Report',
+            'description' => 'Rapportez vos balises',
+        ]
+    ],
     "conditions d'utilisation" => [
         'controllers' => 'legalMentionsController.php',
         "SEO" => [

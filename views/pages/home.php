@@ -6,13 +6,13 @@
                 Pour signer, vraiment.
             </h1>
         </div>
-        <img src="././img/DALL_E-2025-01-08-16.47-removebg-preview.png" alt="Image montrant une 'balise' SoWeSign non fonctionnelle" class="main-slogan-image">
+        <img src="././img/logo_balise.png" alt="Image montrant une 'balise' SoWeSign non fonctionnelle" class="main-slogan-image">
     </div>
     <div class="info-cards">
         <div class="info-card">
             <h3>Dénoncer une balise</h3>
             <p>Signalez rapidement toute balise défectueuse en un clic.</p>
-            <button><span>Dénoncer ici</span> <ion-icon name="arrow-forward-outline"></ion-icon></button>
+            <a href="index.php?page=report"><button><span>Dénoncer ici</span> <ion-icon name="arrow-forward-outline"></ion-icon></button></a>
         </div>
         <div class="info-card">
             <h3>Stats</h3>
